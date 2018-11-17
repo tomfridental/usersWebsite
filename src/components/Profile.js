@@ -1,5 +1,6 @@
 import React from 'react';
 import color_names from './color-names';
+import Profile_Picture from './Profile_Picture'
 
 export default ({id,first_name,last_name,email,country,description,avatar=""})=> {
         
@@ -7,9 +8,10 @@ export default ({id,first_name,last_name,email,country,description,avatar=""})=>
 
 		return (
                     <div className="profile-box">
-                        <div className="profile-image-box " >
+                    <Profile_Picture avatar={avatar} />
+                        {/* <div className="profile-image-box " >
                                 <img src={avatar} />
-                        </div>
+                        </div> */}
                         <div className="profile-details-box">
                             <h2 className="profile-title">{first_name} {last_name}</h2>
                             <span className="grad-line mt20"/>

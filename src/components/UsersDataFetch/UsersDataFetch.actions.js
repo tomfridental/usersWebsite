@@ -10,7 +10,7 @@ export const userDataFetch = ()=> {
 
 		dispatch({ type: FETCHING_USER_DATA })
 
-		return  fetch('//localhost:3000/static/data/MOCK_DATA.json')
+		return  fetch('//localhost:3030/static/data/MOCK_DATA.json')
 				.then((res) => res.json())
 				.then(res => dispatch({
 					type	: USER_DATA_FETCHED,

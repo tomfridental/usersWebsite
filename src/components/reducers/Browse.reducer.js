@@ -7,7 +7,8 @@ import {USER_CREATED} from '../Create/Create.actions';
 let originalState = {
     originalData: [],
     filteredData: [],
-    selectedProfile: {}
+    selectedProfile: {},
+    doneFetch: false
     
 }
 //--
@@ -30,7 +31,8 @@ export default (state = originalState, action) => {
             return Object.assign({}, state, {
                 originalData: action.payload,
                 filteredData: action.payload,
-                selectedProfile: action.payload[0]
+                selectedProfile: action.payload[0],
+                doneFetch: true
               })
         case FETCH_USER_ERROR:
             return {

@@ -12,26 +12,26 @@ import { selectUser } from './SelectProfile/SelectProfile.actions';
 
 
 
+
 class Browse extends Component {
 
 
 
     render() {
 
-      
-        
+
+
 
         const {
             fetchData, //function to fetch data from server
             userData, //the data recieved from the fetch
             filterData, // function to filter the users
-            
             selectUser, //Function to select a single user from the list
-            
         } = this.props;
-      
+        
 
         return (
+
             <div className="browse">
 
                 <div className="header">
@@ -44,7 +44,7 @@ class Browse extends Component {
                 <div className="content-box">
                     <Profile {...userData.selectedProfile} />
                     <List list_data={userData.filteredData}
-                        pick={(item) => selectUser(item)} />
+                        pick={(item) => selectUser(item)} doneFetch={userData.doneFetch}/>
                 </div>
             </div>
         )

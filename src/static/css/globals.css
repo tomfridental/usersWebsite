@@ -224,6 +224,7 @@ li{
         border-radius: 50%;
         width:30rem;
         height:30rem;
+        position: relative;
 }
 .profile-image-box img{
     border-radius: 50%;
@@ -335,69 +336,20 @@ font-family: 'Indie Flower', cursive;
     font-family: 'Indie Flower', cursive;
 }
 
-.create_form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* border: 1px solid black; */
-    width: 50rem;
-    min-height: 20rem;
-    padding: 20px;
-    font-family: 'Indie Flower', cursive;
+.list_loader{
+    width: 50px;
+    height: 50px;
 }
 
-.create_form_name{
-width: 20rem;
-height: 5rem;
-font-size: 2.5rem;
-padding: 5px;
-margin-top: 10px;
-font-family: 'Indie Flower', cursive;
-}
-
-.create_form_name_about{
-    width: 43rem;
-    height: 12rem;
-    font-size: 2.5rem;
-    padding: 5px;
-    margin-top: 10px;
-    font-family: 'Indie Flower', cursive;
-}
-
-.create_form_name_button{
-    background-color: orange;
-    width: 12rem;
-    height: 5rem;
-    margin-top: 10px;
-    border-radius: 30px;
-    color: white;
-    margin-top: 20px;
-}
-
-.create_form_thanks{
-    width: 50rem;
-    height: 20rem;
+.list_loader_div{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    font-family: 'Indie Flower', cursive;
+    width: 100%;
 }
 
-.create_form_warning{
-    font-size: 2.2rem;
-    padding: 0px 20px;
-}
-
-.create_form_error{
-    width: 50rem;
-    height: 5rem;
-    font-size: 2.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Indie Flower', cursive;
-    color: red;
-    font-weight: bold;
+.profile_loader{
+    width: 50px;
+    height: 50px;
+    position: fixed; 
 }

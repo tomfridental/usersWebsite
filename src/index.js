@@ -1,4 +1,4 @@
-import css from './static/css/globals.css';
+import './static/css/globals.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
@@ -26,10 +26,12 @@ const showStore = store => next => action => {
 
 const middleware = applyMiddleware(showStore, ReduxThunk);
 const store = createStore(rootReducer, {}, composeWithDevTools(middleware) )
-store.dispatch(userDataFetch())
+setTimeout(function(){ store.dispatch(userDataFetch()) }, 3000);
+// store.dispatch(userDataFetch())
 
 ReactDOM.render(
   <Provider store={store}>
   <App />
 </Provider>
   , document.querySelector('.main'));
+

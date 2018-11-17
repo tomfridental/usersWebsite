@@ -10,18 +10,8 @@ class Create extends Component {
         super(props);
         this.state = {
         }
-
-        this.formAnswer = this.formAnswer.bind(this)
     }
 
-
-    formAnswer(first_name, last_name, email, country, description) {
-        console.log(' First Name: ' + first_name + '\n\r',
-            'Last Name: ' + last_name + '\n\r',
-            'Email: ' + email + '\n\r',
-            'Country: ' + country + '\n\r',
-            'Description: ' + description + '\n\r')
-    }
 
     render() {
 
@@ -34,7 +24,7 @@ class Create extends Component {
             
             <div className="create">
                 <h1 className="create_header"> Create a New User: </h1>
-                <CreateForm formAnswer={this.formAnswer} createNewUser={createNewUser} userData_originalData={userData.originalData}/>
+                <CreateForm createNewUser={createNewUser} userData_originalData={userData.originalData}/>
             </div>
 
         )
@@ -51,9 +41,7 @@ function mapStateToProps(state, ownProps) {
 }
 function mapDispatchToProps(dispatch) {
     return {
-        createNewUser: (newUser) => dispatch(createUser(newUser)),
-        // filterData: (filtered_list) => dispatch(filterData(filtered_list)),
-        // selectUser: (user) => dispatch(selectUser(user)),
+        createNewUser: (newUser) => dispatch(createUser(newUser))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Create)
