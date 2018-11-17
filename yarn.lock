@@ -6,7 +6,7 @@
   version "0.0.37"
   resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-0.0.37.tgz#195f11bcd9a1b97d9e412c6b66899b545471a1f7"
   dependencies:
-    "@types/node" "*"
+   "@types/node" "*"
 
 "@types/mz@0.0.30":
   version "0.0.30"

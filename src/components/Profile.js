@@ -23,8 +23,3 @@ export default ({id,first_name,last_name,email,country,description,avatar=""})=>
                     </div>
                 )	
 }
-
-//random background color...
-//let keys = Object.keys(color_names);
-//let random_color = keys[ Math.floor( Math.random() * keys.length ) ]
-// style={{background:random_color}}
